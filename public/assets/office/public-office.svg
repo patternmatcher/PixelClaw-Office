@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="448" viewBox="0 0 512 448" role="img" aria-label="Public PixelClaw Office background">
+  <rect width="512" height="448" fill="#171125"/>
+  <defs>
+    <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0H0v16" fill="none" stroke="#2c2350" stroke-width="1" opacity="0.55"/>
+    </pattern>
+    <linearGradient id="floor" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#342552"/>
+      <stop offset="1" stop-color="#201735"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="5" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect x="18" y="18" width="476" height="412" fill="url(#floor)" filter="url(#shadow)"/>
+  <rect x="18" y="18" width="476" height="412" fill="url(#grid)" opacity="0.58"/>
+  <g fill="none" stroke="#6d55b7" stroke-width="4">
+    <path d="M26 118H300M300 26v392M336 64h146M336 218h146M336 318h146"/>
+    <path d="M26 248h274M26 392h274"/>
+  </g>
+  <g fill="#120e1f" stroke="#9b7dff" stroke-width="2">
+    <rect x="214" y="14" width="114" height="70"/>
+    <rect x="32" y="126" width="250" height="120"/>
+    <rect x="32" y="252" width="250" height="136"/>
+    <rect x="344" y="76" width="148" height="118"/>
+    <rect x="344" y="138" width="148" height="74" opacity="0.74"/>
+    <rect x="344" y="242" width="148" height="72"/>
+    <rect x="344" y="320" width="148" height="62"/>
+    <rect x="344" y="384" width="148" height="54"/>
+  </g>
+  <g fill="#70e0ff" opacity="0.5">
+    <rect x="58" y="151" width="46" height="20"/><rect x="122" y="151" width="46" height="20"/><rect x="186" y="151" width="46" height="20"/>
+    <rect x="58" y="286" width="46" height="20"/><rect x="122" y="286" width="46" height="20"/><rect x="186" y="286" width="46" height="20"/>
+    <rect x="372" y="106" width="80" height="16"/><rect x="374" y="270" width="72" height="16"/><rect x="368" y="404" width="82" height="13"/>
+  </g>
+  <g fill="#f2d38a" opacity="0.62">
+    <rect x="238" y="22" width="70" height="18"/><rect x="105" y="134" width="94" height="18"/><rect x="118" y="260" width="68" height="18"/>
+    <rect x="379" y="84" width="74" height="18"/><rect x="378" y="144" width="80" height="18"/><rect x="376" y="248" width="84" height="18"/>
+    <rect x="378" y="324" width="80" height="18"/><rect x="368" y="390" width="102" height="18"/>
+  </g>
+  <g fill="#86dc8d" opacity="0.5">
+    <rect x="430" y="346" width="42" height="20"/><rect x="398" y="346" width="26" height="20"/>
+  </g>
+  <g fill="#0e0b18" opacity="0.8">
+    <rect x="46" y="184" width="208" height="10"/><rect x="46" y="322" width="208" height="10"/>
+    <rect x="368" y="128" width="96" height="10"/><rect x="368" y="292" width="96" height="10"/>
+  </g>
+  <g font-family="monospace" font-size="11" font-weight="700" text-anchor="middle" fill="#fff3bd">
+    <text x="273" y="36">INBOX</text><text x="152" y="148">TERMINAL</text><text x="152" y="274">DEV</text>
+    <text x="416" y="98">INTEL</text><text x="418" y="158">IDEAS</text><text x="418" y="262">COMMS</text>
+    <text x="418" y="338">LOUNGE</text><text x="419" y="404">MONITOR</text>
+  </g>
+</svg>

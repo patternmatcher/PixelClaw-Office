@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixel Office</title>
+  <meta name="description" content="Live pixel-art dashboard for AI agent work.">
+  <link rel="stylesheet" href="/css/main.css?v=20260314-2151">
+  <link rel="stylesheet" href="/css/gateway-left-restore.css?v=20260315-1725">
+</head>
+<body>
+  <main class="office-app" aria-label="Pixel Office">
+    <div class="office-layout">
+      <aside class="gateway-rail" aria-label="Gateway live panel">
+        <section class="gateway-card">
+          <div class="gateway-card__titlebar">
+            <div class="gateway-card__lights" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div>
+              <h2>Gateway</h2>
+              <p>Runtime console / live local feed</p>
+            </div>
+          </div>
+          <div class="gateway-card__summary" id="gateway-summary"></div>
+          <div class="gateway-card__meta" id="gateway-meta"></div>
+          <div class="gateway-card__terminal">
+            <div class="gateway-card__loghead" id="gateway-loghead"></div>
+            <div class="gateway-card__log" id="gateway-log"></div>
+          </div>
+        </section>
+      </aside>
+      <section class="office-pane">
+        <div class="office-toolbar">
+          <button class="office-toolbar__button" id="layout-edit-toggle" type="button">Layout edit: off</button>
+        </div>
+        <section class="office-stage" id="office-stage">
+          <div class="office-view" id="office-view">
+            <img class="office-view__bg" src="/assets/office/public-office.svg" alt="Pixel office background">
+            <div class="office-view__zones"></div>
+            <div class="office-view__workers"></div>
+          </div>
+        </section>
+      </section>
+      <aside class="info-rail" aria-label="Pixel Office info rail">
+        <section class="rail-card rail-card--stats">
+          <h2>Office</h2>
+          <div class="stat-grid" id="stats-grid"></div>
+        </section>
+        <section class="rail-card rail-card--focus">
+          <h2>Focus</h2>
+          <div id="focus-panel"></div>
+        </section>
+      </aside>
+      <div class="detail-card-root" id="detail-card-root" aria-live="polite"></div>
+      <aside class="health-log health-log--hidden" id="health-log" aria-live="polite" aria-label="Pixel Office health log"></aside>
+    </div>
+  </main>
+  <script type="module" src="/js/main.js?v=20260315-2306"></script>
+</body>
+</html>

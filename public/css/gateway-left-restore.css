@@ -1,0 +1,237 @@
+/* Restored gateway-left rail look: compact info chips above, dominant scrollable terminal below */
+.gateway-rail {
+  position: relative;
+  z-index: 6;
+}
+
+.gateway-card {
+  isolation: isolate;
+  background: #140f22;
+  border: 1px solid #33244d;
+}
+
+.gateway-card__titlebar {
+  padding: 9px 12px;
+  background: linear-gradient(180deg, #2f2147, #211535);
+  border-bottom: 1px solid #160d27;
+}
+
+.gateway-card__titlebar h2 {
+  font-size: 0.84rem;
+  color: #f5ecff;
+}
+
+.gateway-card__titlebar p {
+  font-size: 0.64rem;
+  color: #c4b3df;
+}
+
+.gateway-card__lights span {
+  width: 11px;
+  height: 11px;
+  border: 1px solid rgba(11, 6, 19, 0.5);
+}
+
+.gateway-card__lights span:nth-child(1) { background: #ff7ba7; }
+.gateway-card__lights span:nth-child(2) { background: #d88cff; }
+.gateway-card__lights span:nth-child(3) { background: #7eb0ff; }
+
+.gateway-card__summary {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px 0;
+  grid-template-columns: 1fr 1fr;
+  max-height: 86px;
+  overflow: hidden;
+}
+
+.gateway-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 8px 12px 0;
+  max-height: 92px;
+  overflow: hidden;
+}
+
+.gateway-kv,
+.gateway-chip {
+  padding: 6px 8px;
+  border-radius: 0;
+  background: #171024;
+  border: 1px solid #35264f;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+}
+
+.gateway-chip {
+  min-width: 0;
+  flex: 1 1 104px;
+}
+
+.gateway-kv span,
+.gateway-chip span {
+  display: block;
+  font-size: 0.52rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #a695c2;
+}
+
+.gateway-kv strong,
+.gateway-chip strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.62rem;
+  line-height: 1.25;
+  color: #f3ecff;
+  word-break: break-word;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.gateway-kv.is-ok,
+.gateway-chip.is-ok {
+  border-color: #4d3d7a;
+  background: #171126;
+}
+
+.gateway-kv.is-warn,
+.gateway-chip.is-warn {
+  border-color: #78539d;
+  background: #21113f;
+}
+
+.gateway-chip.is-dim {
+  background: #140d21;
+}
+
+.gateway-card__terminal {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 auto;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 12px 12px;
+  border: 1px solid #35264f;
+  background:
+    linear-gradient(180deg, rgba(88, 54, 140, 0.16), transparent 22%),
+    #0d0816;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(176, 116, 255, 0.06);
+  isolation: isolate;
+}
+
+.gateway-card__terminal:hover {
+  border-color: #6b4ca2;
+}
+
+.gateway-card__terminal.is-scrollable {
+  outline: 1px solid rgba(176, 116, 255, 0.2);
+  outline-offset: -1px;
+}
+
+.gateway-card__terminal.is-scrollable:not(.is-at-bottom) {
+  border-color: #8c6cff;
+}
+
+.gateway-card__loghead {
+  position: relative;
+  z-index: 3;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 9px;
+  border-bottom: 1px solid #35264f;
+  background: linear-gradient(180deg, #1a102c, #120a20);
+  font: 11px/1.2 Menlo, Monaco, Consolas, 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #b8a7d6;
+}
+
+.gateway-loghead__label {
+  color: #cba0ff;
+}
+
+.gateway-card__terminal.is-scrollable .gateway-loghead__label::before {
+  content: 'SCROLL ';
+  color: #f0d2ff;
+}
+
+.gateway-card__terminal.is-scrolled .gateway-loghead__label::before {
+  content: 'LOG ';
+  color: #cba0ff;
+}
+
+.gateway-loghead__state {
+  padding: 2px 6px;
+  border: 1px solid #4a376e;
+  color: #f0e5ff;
+}
+
+.gateway-card__log {
+  position: relative;
+  z-index: 4;
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  padding: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable both-edges;
+  border-radius: 0;
+  background:
+    linear-gradient(180deg, rgba(88, 54, 140, 0.14), transparent 28%),
+    #0d0816;
+  scrollbar-width: auto;
+  scrollbar-color: #b074ff #160f25;
+}
+
+.gateway-card__log::after {
+  content: 'RAW GATEWAY LOG';
+  position: sticky;
+  bottom: 0;
+  float: right;
+  margin-top: 8px;
+  font: 10px/1 Menlo, Monaco, Consolas, 'Courier New', monospace;
+  color: rgba(176, 116, 255, 0.28);
+  letter-spacing: 0.12em;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gateway-card__log pre {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  min-height: 100%;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font: 11px/1.38 Menlo, Monaco, Consolas, 'Courier New', monospace;
+  color: #dccbff;
+  text-shadow: 0 0 8px rgba(176, 116, 255, 0.08);
+}
+
+.gateway-card__log::-webkit-scrollbar {
+  width: 16px;
+}
+
+.gateway-card__log::-webkit-scrollbar-track {
+  background: #160f25;
+  border-left: 2px solid #2f2150;
+  box-shadow: inset 0 0 0 1px #0b0613;
+}
+
+.gateway-card__log::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f3e6ff 0 4px, #c897ff 4px 8px, #8b5ed7 8px calc(100% - 8px), #4f2b86 calc(100% - 8px) 100%);
+  border: 2px solid #1b1030;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 1px #f5e9ff, inset -2px -2px 0 #40216f, 0 0 0 1px #0b0613;
+}
+
+.gateway-card__log::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #fbf3ff 0 4px, #d9b5ff 4px 8px, #b074ff 8px calc(100% - 8px), #6b3eb0 calc(100% - 8px) 100%);
+}
